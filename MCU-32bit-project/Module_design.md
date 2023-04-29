@@ -8,7 +8,7 @@ PC_reg(时序逻辑) {
     out pc[32bit]   指令地址
 }
 
-取指
+//取指
 if(组合逻辑){
     in  pc              [32bit] pc寄存器的指令地址输入
     out done_pc                 done信号输出到PC_reg模块
@@ -23,7 +23,7 @@ if(组合逻辑){
 }
 
 
-取指_解码寄存器
+//取指_解码寄存器
 if_id(时许逻辑){
     in  clk                     时钟  
     in  rst                     复位
