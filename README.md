@@ -5,7 +5,7 @@
 - 通过FPGA实现   
 - 使用的硬件描述语言为SpinalHDL
 
-# 现在有的实现 [MCU-RV32I-Project](./MCU-32bit-project/)
+# 现有的实现 [MCU-RV32I-Project](./MCU-32bit-project/)
 
 
 ## git_test
