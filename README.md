@@ -1,7 +1,7 @@
 # 自研MCU项目(目标)
 - 64位MCU
 - 通过使用硬件描述语言实现一个属于自己的MCU    
-- 使用RISC-V 64GV ISA     
+- 使用RISC-V 64GC ISA     
 - 通过FPGA实现   
 - 使用的硬件描述语言为SpinalHDL
 

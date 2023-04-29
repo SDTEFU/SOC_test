@@ -1,6 +1,6 @@
 // Generator : SpinalHDL v1.8.1    git head : 2a7592004363e5b40ec43e1f122ed8641cd8965b
 // Component : pc_reg
-// Git hash  : bf445f0dd02d67cffc112427716c7e049af9ac95
+// Git hash  : e48625a8d5787804e64c011ceef3a0646b4b5d5d
 
 `timescale 1ns/1ps
 
@@ -11,15 +11,15 @@ module pc_reg (
 );
 
   reg        [31:0]   clkarea_pc_o;
-  wire                when_template_l18;
+  wire                when_template_l24;
 
-  assign when_template_l18 = (clkarea_pc_o == 32'h7fffffff);
+  assign when_template_l24 = (clkarea_pc_o == 32'hffffffff);
   assign io_pc_o = clkarea_pc_o;
-  always @(posedge io_clk or posedge io_rst_n) begin
-    if(io_rst_n) begin
+  always @(posedge io_clk) begin
+    if(!io_rst_n) begin
       clkarea_pc_o <= 32'h0;
     end else begin
-      if(when_template_l18) begin
+      if(when_template_l24) begin
         clkarea_pc_o <= 32'h0;
       end else begin
         clkarea_pc_o <= (clkarea_pc_o + 32'h00000004);
