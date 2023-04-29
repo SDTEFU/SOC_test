@@ -4,15 +4,18 @@ PC_reg(时序逻辑) {
     in  clk         时钟
     in  rst         复位
     
+    out access      SSM总线请求信号
     in  done        SSM总线回复的done信号
-    out pc[32bit]   指令地址
+    out pc_o        [32bit]   指令地址
 }
 
 //取指
 if(组合逻辑){
     in  pc              [32bit] pc寄存器的指令地址输入
     out done_pc                 done信号输出到PC_reg模块
-   
+    in  access                  SSM总线请求信号
+
+    out access_ssm              SSM总线请求信号
     out pc_ssm          [32bit] 指令地址输出到SSM总线
     in  done_ssm                SSM总线输出的done信号
     in  inst_ssm        [32bit] SSM总线读出的指令
