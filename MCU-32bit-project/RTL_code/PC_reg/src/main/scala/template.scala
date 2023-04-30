@@ -33,7 +33,7 @@ class PC_reg(CPU_bits: Int) extends Module {
       pc_o := pc_o
     }
 
-    when(access_sign) {   //单时钟脉冲
+    when(access_sign) { //单时钟脉冲
       access_sign := False
     }
     io.access := access_sign
@@ -42,13 +42,18 @@ class PC_reg(CPU_bits: Int) extends Module {
 }
 
 
-
-
 object template extends App {
   SpinalConfig(
     mode = Verilog,
     targetDirectory = "./RTL_verilog_code"
   ).generate(new PC_reg(32))
+
+
+  //Sim=====================================================================
+
+  import spinal.core.sim._
+  //SimConfig.withXSim.withWave()
+
 
   println(s"${scala.math.pow(2, 32).toLong}")
 }
