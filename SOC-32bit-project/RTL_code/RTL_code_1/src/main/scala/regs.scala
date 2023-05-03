@@ -2,7 +2,7 @@ import spinal.core._
 
 class regs(CPU_bit: Int) extends Module {
   val reg_addr_len = 5 //寄存器地址长度
-  val reg_count = scala.math.pow(2, 5).toInt //寄存器数量
+  val reg_count = scala.math.pow(2, reg_addr_len).toInt //寄存器数量
 
 
   val io = new Bundle {
@@ -26,14 +26,16 @@ class regs(CPU_bit: Int) extends Module {
 
 
   //read rs1
-  io.rs1_data := reg_mem(io.rs1_addr)
-  when(io.w_en || io.rd_addr === io.rs1_addr) { //判断前一个指令是否在写寄存器
+  when(io.w_en && io.rd_addr === io.rs1_addr) { //判断前一个指令是否在写现在要读的寄存器
     io.rs1_data := io.rd_data
+  } otherwise {
+    io.rs1_data := reg_mem(io.rs1_addr)
   }
   //read rs2
-  io.rs2_data := reg_mem(io.rs2_addr)
-  when(io.w_en || io.rd_addr === io.rs2_addr) { //判断前一个指令是否在写寄存器
+  when(io.w_en && io.rd_addr === io.rs2_addr) { //判断前一个指令是否在写现在要读的寄存器
     io.rs2_data := io.rd_data
+  } otherwise {
+    io.rs2_data := reg_mem(io.rs2_addr)
   }
 
   //写数据给目标寄存器
@@ -58,4 +60,7 @@ object regs extends App {
     mode = Verilog,
     targetDirectory = "./RTL_verilog_code"
   ).generate(new regs(32))
+
+  val reg_addr_len = 5
+  println(s"${scala.math.pow(2, reg_addr_len).toInt}")
 }

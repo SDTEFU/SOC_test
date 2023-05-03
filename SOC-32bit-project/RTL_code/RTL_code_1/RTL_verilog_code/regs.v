@@ -1,6 +1,6 @@
 // Generator : SpinalHDL v1.8.1    git head : 2a7592004363e5b40ec43e1f122ed8641cd8965b
 // Component : regs
-// Git hash  : 7e81b431085105c423e34a271ec7fab40d92e874
+// Git hash  : fb0c47cf8ae555ed0a75cff91db00bfbb4ddf7e7
 
 `timescale 1ns/1ps
 
@@ -116,9 +116,9 @@ module regs (
   reg                 _zz_31;
   reg                 _zz_32;
   reg                 _zz_33;
-  wire                when_regs_l30;
+  wire                when_regs_l29;
   wire                when_regs_l35;
-  wire                when_regs_l44;
+  wire                when_regs_l46;
   (* ram_style = "distributed" *) reg [31:0] reg_mem [0:31];
 
   assign _zz_reg_mem_port = 5'h0;
@@ -395,244 +395,246 @@ module regs (
 
   always @(*) begin
     _zz_2 = 1'b0;
-    if(when_regs_l44) begin
+    if(when_regs_l46) begin
       _zz_2 = 1'b1;
     end
   end
 
   always @(*) begin
     _zz_3 = 1'b0;
-    if(when_regs_l44) begin
+    if(when_regs_l46) begin
       _zz_3 = 1'b1;
     end
   end
 
   always @(*) begin
     _zz_4 = 1'b0;
-    if(when_regs_l44) begin
+    if(when_regs_l46) begin
       _zz_4 = 1'b1;
     end
   end
 
   always @(*) begin
     _zz_5 = 1'b0;
-    if(when_regs_l44) begin
+    if(when_regs_l46) begin
       _zz_5 = 1'b1;
     end
   end
 
   always @(*) begin
     _zz_6 = 1'b0;
-    if(when_regs_l44) begin
+    if(when_regs_l46) begin
       _zz_6 = 1'b1;
     end
   end
 
   always @(*) begin
     _zz_7 = 1'b0;
-    if(when_regs_l44) begin
+    if(when_regs_l46) begin
       _zz_7 = 1'b1;
     end
   end
 
   always @(*) begin
     _zz_8 = 1'b0;
-    if(when_regs_l44) begin
+    if(when_regs_l46) begin
       _zz_8 = 1'b1;
     end
   end
 
   always @(*) begin
     _zz_9 = 1'b0;
-    if(when_regs_l44) begin
+    if(when_regs_l46) begin
       _zz_9 = 1'b1;
     end
   end
 
   always @(*) begin
     _zz_10 = 1'b0;
-    if(when_regs_l44) begin
+    if(when_regs_l46) begin
       _zz_10 = 1'b1;
     end
   end
 
   always @(*) begin
     _zz_11 = 1'b0;
-    if(when_regs_l44) begin
+    if(when_regs_l46) begin
       _zz_11 = 1'b1;
     end
   end
 
   always @(*) begin
     _zz_12 = 1'b0;
-    if(when_regs_l44) begin
+    if(when_regs_l46) begin
       _zz_12 = 1'b1;
     end
   end
 
   always @(*) begin
     _zz_13 = 1'b0;
-    if(when_regs_l44) begin
+    if(when_regs_l46) begin
       _zz_13 = 1'b1;
     end
   end
 
   always @(*) begin
     _zz_14 = 1'b0;
-    if(when_regs_l44) begin
+    if(when_regs_l46) begin
       _zz_14 = 1'b1;
     end
   end
 
   always @(*) begin
     _zz_15 = 1'b0;
-    if(when_regs_l44) begin
+    if(when_regs_l46) begin
       _zz_15 = 1'b1;
     end
   end
 
   always @(*) begin
     _zz_16 = 1'b0;
-    if(when_regs_l44) begin
+    if(when_regs_l46) begin
       _zz_16 = 1'b1;
     end
   end
 
   always @(*) begin
     _zz_17 = 1'b0;
-    if(when_regs_l44) begin
+    if(when_regs_l46) begin
       _zz_17 = 1'b1;
     end
   end
 
   always @(*) begin
     _zz_18 = 1'b0;
-    if(when_regs_l44) begin
+    if(when_regs_l46) begin
       _zz_18 = 1'b1;
     end
   end
 
   always @(*) begin
     _zz_19 = 1'b0;
-    if(when_regs_l44) begin
+    if(when_regs_l46) begin
       _zz_19 = 1'b1;
     end
   end
 
   always @(*) begin
     _zz_20 = 1'b0;
-    if(when_regs_l44) begin
+    if(when_regs_l46) begin
       _zz_20 = 1'b1;
     end
   end
 
   always @(*) begin
     _zz_21 = 1'b0;
-    if(when_regs_l44) begin
+    if(when_regs_l46) begin
       _zz_21 = 1'b1;
     end
   end
 
   always @(*) begin
     _zz_22 = 1'b0;
-    if(when_regs_l44) begin
+    if(when_regs_l46) begin
       _zz_22 = 1'b1;
     end
   end
 
   always @(*) begin
     _zz_23 = 1'b0;
-    if(when_regs_l44) begin
+    if(when_regs_l46) begin
       _zz_23 = 1'b1;
     end
   end
 
   always @(*) begin
     _zz_24 = 1'b0;
-    if(when_regs_l44) begin
+    if(when_regs_l46) begin
       _zz_24 = 1'b1;
     end
   end
 
   always @(*) begin
     _zz_25 = 1'b0;
-    if(when_regs_l44) begin
+    if(when_regs_l46) begin
       _zz_25 = 1'b1;
     end
   end
 
   always @(*) begin
     _zz_26 = 1'b0;
-    if(when_regs_l44) begin
+    if(when_regs_l46) begin
       _zz_26 = 1'b1;
     end
   end
 
   always @(*) begin
     _zz_27 = 1'b0;
-    if(when_regs_l44) begin
+    if(when_regs_l46) begin
       _zz_27 = 1'b1;
     end
   end
 
   always @(*) begin
     _zz_28 = 1'b0;
-    if(when_regs_l44) begin
+    if(when_regs_l46) begin
       _zz_28 = 1'b1;
     end
   end
 
   always @(*) begin
     _zz_29 = 1'b0;
-    if(when_regs_l44) begin
+    if(when_regs_l46) begin
       _zz_29 = 1'b1;
     end
   end
 
   always @(*) begin
     _zz_30 = 1'b0;
-    if(when_regs_l44) begin
+    if(when_regs_l46) begin
       _zz_30 = 1'b1;
     end
   end
 
   always @(*) begin
     _zz_31 = 1'b0;
-    if(when_regs_l44) begin
+    if(when_regs_l46) begin
       _zz_31 = 1'b1;
     end
   end
 
   always @(*) begin
     _zz_32 = 1'b0;
-    if(when_regs_l44) begin
+    if(when_regs_l46) begin
       _zz_32 = 1'b1;
     end
   end
 
   always @(*) begin
     _zz_33 = 1'b0;
-    if(when_regs_l44) begin
+    if(when_regs_l46) begin
       _zz_33 = 1'b1;
     end
   end
 
+  assign when_regs_l29 = (io_w_en && (io_rd_addr == io_rs1_addr));
   always @(*) begin
-    io_rs1_data = _zz_reg_mem_port0;
-    if(when_regs_l30) begin
+    if(when_regs_l29) begin
       io_rs1_data = io_rd_data;
+    end else begin
+      io_rs1_data = _zz_reg_mem_port0;
     end
   end
 
-  assign when_regs_l30 = (io_w_en || (io_rd_addr == io_rs1_addr));
+  assign when_regs_l35 = (io_w_en && (io_rd_addr == io_rs2_addr));
   always @(*) begin
-    io_rs2_data = _zz_reg_mem_port1;
     if(when_regs_l35) begin
       io_rs2_data = io_rd_data;
+    end else begin
+      io_rs2_data = _zz_reg_mem_port1;
     end
   end
 
-  assign when_regs_l35 = (io_w_en || (io_rd_addr == io_rs2_addr));
-  assign when_regs_l44 = (! io_rst_n);
+  assign when_regs_l46 = (! io_rst_n);
 
 endmodule
