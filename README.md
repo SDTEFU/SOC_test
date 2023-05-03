@@ -1,11 +1,9 @@
-# 自研MCU项目(目标)
-- 64位MCU
-- 通过使用硬件描述语言实现一个属于自己的MCU    
+# 自制SOC项目(目标)
+- 通过使用硬件描述语言实现一个属于自己的SOC    
 - 使用RISC-V 64GC ISA     
-- 通过FPGA实现   
 - 使用的硬件描述语言为SpinalHDL
 
-# 现有的实现 [MCU-RV32I-Project](./MCU-32bit-project/)
+# 现有的实现 [SOC-RV32I-Project](./SOC-32bit-project/)
 
 
 > ### 设计过程
