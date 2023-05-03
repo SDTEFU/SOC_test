@@ -1,4 +1,4 @@
-# 通过硬件描述语言和RISC-V ISA构建一个属于自己的MCU
+# 通过硬件描述语言和RISC-V ISA构建一个属于自己的SOC
 
 > ## 拥有的外设
 1. FPIOA（现场可编程IO阵列）
@@ -13,12 +13,11 @@
 
 > ## 使用的硬件描述语言
 - SpinalHDL
-- Verilog
 
 > ## 开发步骤
 1. RISV-V 64i 与外设规划
 2. CPU与外设同步开发
-3. 研究MCU与SPI-Flash的通讯
+3. 研究SOC与SPI-Flash的通讯
 4. 开发RUST-API
 
 > ## 使用者开发过程

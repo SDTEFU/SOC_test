@@ -2,6 +2,7 @@
 - 通过使用硬件描述语言实现一个属于自己的SOC    
 - 使用RISC-V 64GC ISA     
 - 使用的硬件描述语言为SpinalHDL
+- 浮点运算采用Posit标准
 
 # 现有的实现 [SOC-RV32I-Project](./SOC-32bit-project/)
 
