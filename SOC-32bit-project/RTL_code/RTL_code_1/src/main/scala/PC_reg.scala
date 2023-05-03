@@ -12,21 +12,40 @@ class PC_reg(CPU_bits: Int) extends Module {
   val CPU_Max_num = scala.math.pow(2, CPU_bits).toLong - 1
 
   val io = new Bundle {
+    //from system
     val clk = in Bool()
     val rst_n = in Bool()
+
+    //from ctrl
+    val ctrl = in Bits (2 bits)
+    val jump_addr = in Bits (CPU_bits)
+
+    //from  SSE 控制器PC接口部分
+    val USE = out Bool()
+    val belong = in Bool()
+
+    //from if
     val access = out Bool()
-    val done = in Bool()
     val pc_o = out UInt (CPU_bits bits)
+    val done = in Bool()
   }
+
+  io.USE := true //使用SSE总线
+
   val clkdmicfg = ClockDomainConfig(clockEdge = RISING, resetKind = SYNC, resetActiveLevel = LOW)
   val clkdmi = ClockDomain(clock = io.clk, reset = io.rst_n, config = clkdmicfg)
   val clkarea = new ClockingArea(clkdmi) {
-    val pc_o = Reg(UInt(CPU_bits bits)) init (0)
-    val access_sign = Reg(Bool()) init (False)
 
-    when(pc_o === CPU_Max_num) {
+    val pc_o = Reg(UInt(CPU_bits bits)) init (0) //PC指令地址
+    val access_sign = Reg(Bool()) init (False) //请求SSE总线执行
+
+    when(pc_o === CPU_Max_num) { //计数到最大值时
       pc_o := 0
-    } elsewhen (io.done === True) {//总线反馈信号没到来
+    } elsewhen (io.ctrl === 1) { //跳转指令要跳转时
+      pc_o := io.jump_addr
+    } elsewhen (io.ctrl === 2) { //访存指令执行时
+      pc_o := pc_o
+    } elsewhen (io.done === True) { //总线反馈信号到来
       pc_o := pc_o + 4
       access_sign := True
     } otherwise {
