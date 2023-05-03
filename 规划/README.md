@@ -21,7 +21,7 @@
 4. 开发RUST-API
 
 > ## 使用者开发过程
-1. 通过使用RUST写的代码编译成RV64I的二进制文件
+s1. 通过使用RUST写的代码编译成RV64I的二进制文件
 2. 烧录到SPI-Flash中
 3. SPI-Flash连接设计好的MCU执行程序
 
