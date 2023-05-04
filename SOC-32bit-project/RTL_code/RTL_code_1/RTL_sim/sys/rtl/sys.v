@@ -8,7 +8,9 @@ module sys (
   input               io_ckl,
   input               io_rst_n,
   output              io_sys_clk,
-  output              io_sys_rst_n
+  output              io_sys_rst_n,
+  input               clk,
+  input               reset
 );
 
   reg                 clkarea_rst_one;
