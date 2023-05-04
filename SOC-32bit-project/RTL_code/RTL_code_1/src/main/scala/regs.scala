@@ -26,13 +26,17 @@ class regs(CPU_bit: Int) extends Module {
 
 
   //read rs1
-  when(io.w_en && io.rd_addr === io.rs1_addr) { //判断前一个指令是否在写现在要读的寄存器
+  when(io.rs1_addr === 0) { //若访问0寄存器
+    io.rs1_data := 0
+  } elsewhen (io.w_en && io.rd_addr === io.rs1_addr) { //判断前一个指令是否在写现在要读的寄存器
     io.rs1_data := io.rd_data
   } otherwise {
     io.rs1_data := reg_mem(io.rs1_addr)
   }
   //read rs2
-  when(io.w_en && io.rd_addr === io.rs2_addr) { //判断前一个指令是否在写现在要读的寄存器
+  when(io.rs2_addr === 0) { //若访问0寄存器
+    io.rs2_data := 0
+  } elsewhen (io.w_en && io.rd_addr === io.rs2_addr) { //判断前一个指令是否在写现在要读的寄存器
     io.rs2_data := io.rd_data
   } otherwise {
     io.rs2_data := reg_mem(io.rs2_addr)
@@ -48,8 +52,12 @@ class regs(CPU_bit: Int) extends Module {
         reg_mem(U(rstcount, reg_addr_len bits)) := U(0, 32 bits)
       }
     }
-    when(io.w_en) { //给寄存器堆写数据
-      reg_mem(io.rd_addr) := io.rd_data
+    when(io.w_en) { //给寄存器堆写数据使能
+      when(io.rd_addr === 0) {//若写的寄存器是0寄存器
+        reg_mem(io.rd_addr) := U(0, 32 bits)
+      } otherwise {
+        reg_mem(io.rd_addr) := io.rd_data
+      }
     }
 
   }

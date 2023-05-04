@@ -17,8 +17,8 @@ class PC_reg(CPU_bits: Int) extends Module {
     val rst_n = in Bool()
 
     //from ctrl
-    val ctrl = in UInt  (2 bits)
-    val jump_addr = in UInt  (CPU_bits bits)
+    val ctrl = in UInt (2 bits)
+    val jump_addr = in UInt (CPU_bits bits)
 
     //from  SSE 控制器PC接口部分
     val USE = out Bool()
@@ -32,19 +32,21 @@ class PC_reg(CPU_bits: Int) extends Module {
   }
 
   io.USE := True //使用SSE总线
-  io.w_en:=False //读数据模式
+  io.w_en := False //读数据模式
 
   val clkdmicfg = ClockDomainConfig(clockEdge = RISING, resetKind = SYNC, resetActiveLevel = LOW)
   val clkdmi = ClockDomain(clock = io.clk, reset = io.rst_n, config = clkdmicfg)
   val clkarea = new ClockingArea(clkdmi) {
 
     val pc_o = Reg(UInt(CPU_bits bits)) init (0) //PC指令地址
-    val access_sign = Reg(Bool()) init (False) //请求SSE总线执行
+    val access_sign = Reg(Bool()) init (True)    //请求SSE总线执行标志 复位值为true表示复位后要请求从总线获取指令
 
     when(pc_o === CPU_Max_num) { //计数到最大值时
       pc_o := 0
+      access_sign := True
     } elsewhen (io.ctrl === 1) { //跳转指令要跳转时
       pc_o := io.jump_addr
+      access_sign := True
     } elsewhen (io.ctrl === 2) { //访存指令执行时
       pc_o := pc_o
     } elsewhen (io.done && io.belong) { //总线反馈信号到来且为主设备
@@ -54,17 +56,16 @@ class PC_reg(CPU_bits: Int) extends Module {
       pc_o := pc_o
 
     }
-
-    when(access_sign) { //单时钟脉冲
+    when(access_sign) {
       access_sign := False
-      io.pc_o:= 0
-    }otherwise{
-      io.pc_o:=pc_o
     }
-
-
     io.access := access_sign
-    //io.pc_o := pc_o
+  }
+  //将指令地址信号转换为SSE总线信号
+  when(clkarea.access_sign) {
+    io.pc_o := clkarea.pc_o
+  } otherwise {
+    io.pc_o := 0
   }
 }
 

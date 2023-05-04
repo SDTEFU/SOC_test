@@ -1,6 +1,6 @@
 // Generator : SpinalHDL v1.8.1    git head : 2a7592004363e5b40ec43e1f122ed8641cd8965b
 // Component : regs
-// Git hash  : fb0c47cf8ae555ed0a75cff91db00bfbb4ddf7e7
+// Git hash  : 7f4d7e5b30c4803fd31bc3a40a4667ab1bf2ae07
 
 `timescale 1ns/1ps
 
@@ -83,6 +83,7 @@ module regs (
   wire       [4:0]    _zz_reg_mem_port_62;
   wire       [31:0]   _zz_reg_mem_port_63;
   wire       [31:0]   _zz_reg_mem_port_64;
+  wire       [31:0]   _zz_reg_mem_port_65;
   reg                 _zz_1;
   reg                 _zz_2;
   reg                 _zz_3;
@@ -116,9 +117,13 @@ module regs (
   reg                 _zz_31;
   reg                 _zz_32;
   reg                 _zz_33;
+  reg                 _zz_34;
   wire                when_regs_l29;
-  wire                when_regs_l35;
-  wire                when_regs_l46;
+  wire                when_regs_l31;
+  wire                when_regs_l37;
+  wire                when_regs_l39;
+  wire                when_regs_l50;
+  wire                when_regs_l56;
   (* ram_style = "distributed" *) reg [31:0] reg_mem [0:31];
 
   assign _zz_reg_mem_port = 5'h0;
@@ -185,456 +190,485 @@ module regs (
   assign _zz_reg_mem_port_61 = 32'h0;
   assign _zz_reg_mem_port_62 = 5'h1f;
   assign _zz_reg_mem_port_63 = 32'h0;
-  assign _zz_reg_mem_port_64 = io_rd_data;
+  assign _zz_reg_mem_port_64 = 32'h0;
+  assign _zz_reg_mem_port_65 = io_rd_data;
   assign _zz_reg_mem_port0 = reg_mem[io_rs1_addr];
   assign _zz_reg_mem_port1 = reg_mem[io_rs2_addr];
   always @(posedge io_clk) begin
-    if(_zz_33) begin
+    if(_zz_34) begin
       reg_mem[_zz_reg_mem_port] <= _zz_reg_mem_port_1;
     end
   end
 
   always @(posedge io_clk) begin
-    if(_zz_32) begin
+    if(_zz_33) begin
       reg_mem[_zz_reg_mem_port_2] <= _zz_reg_mem_port_3;
     end
   end
 
   always @(posedge io_clk) begin
-    if(_zz_31) begin
+    if(_zz_32) begin
       reg_mem[_zz_reg_mem_port_4] <= _zz_reg_mem_port_5;
     end
   end
 
   always @(posedge io_clk) begin
-    if(_zz_30) begin
+    if(_zz_31) begin
       reg_mem[_zz_reg_mem_port_6] <= _zz_reg_mem_port_7;
     end
   end
 
   always @(posedge io_clk) begin
-    if(_zz_29) begin
+    if(_zz_30) begin
       reg_mem[_zz_reg_mem_port_8] <= _zz_reg_mem_port_9;
     end
   end
 
   always @(posedge io_clk) begin
-    if(_zz_28) begin
+    if(_zz_29) begin
       reg_mem[_zz_reg_mem_port_10] <= _zz_reg_mem_port_11;
     end
   end
 
   always @(posedge io_clk) begin
-    if(_zz_27) begin
+    if(_zz_28) begin
       reg_mem[_zz_reg_mem_port_12] <= _zz_reg_mem_port_13;
     end
   end
 
   always @(posedge io_clk) begin
-    if(_zz_26) begin
+    if(_zz_27) begin
       reg_mem[_zz_reg_mem_port_14] <= _zz_reg_mem_port_15;
     end
   end
 
   always @(posedge io_clk) begin
-    if(_zz_25) begin
+    if(_zz_26) begin
       reg_mem[_zz_reg_mem_port_16] <= _zz_reg_mem_port_17;
     end
   end
 
   always @(posedge io_clk) begin
-    if(_zz_24) begin
+    if(_zz_25) begin
       reg_mem[_zz_reg_mem_port_18] <= _zz_reg_mem_port_19;
     end
   end
 
   always @(posedge io_clk) begin
-    if(_zz_23) begin
+    if(_zz_24) begin
       reg_mem[_zz_reg_mem_port_20] <= _zz_reg_mem_port_21;
     end
   end
 
   always @(posedge io_clk) begin
-    if(_zz_22) begin
+    if(_zz_23) begin
       reg_mem[_zz_reg_mem_port_22] <= _zz_reg_mem_port_23;
     end
   end
 
   always @(posedge io_clk) begin
-    if(_zz_21) begin
+    if(_zz_22) begin
       reg_mem[_zz_reg_mem_port_24] <= _zz_reg_mem_port_25;
     end
   end
 
   always @(posedge io_clk) begin
-    if(_zz_20) begin
+    if(_zz_21) begin
       reg_mem[_zz_reg_mem_port_26] <= _zz_reg_mem_port_27;
     end
   end
 
   always @(posedge io_clk) begin
-    if(_zz_19) begin
+    if(_zz_20) begin
       reg_mem[_zz_reg_mem_port_28] <= _zz_reg_mem_port_29;
     end
   end
 
   always @(posedge io_clk) begin
-    if(_zz_18) begin
+    if(_zz_19) begin
       reg_mem[_zz_reg_mem_port_30] <= _zz_reg_mem_port_31;
     end
   end
 
   always @(posedge io_clk) begin
-    if(_zz_17) begin
+    if(_zz_18) begin
       reg_mem[_zz_reg_mem_port_32] <= _zz_reg_mem_port_33;
     end
   end
 
   always @(posedge io_clk) begin
-    if(_zz_16) begin
+    if(_zz_17) begin
       reg_mem[_zz_reg_mem_port_34] <= _zz_reg_mem_port_35;
     end
   end
 
   always @(posedge io_clk) begin
-    if(_zz_15) begin
+    if(_zz_16) begin
       reg_mem[_zz_reg_mem_port_36] <= _zz_reg_mem_port_37;
     end
   end
 
   always @(posedge io_clk) begin
-    if(_zz_14) begin
+    if(_zz_15) begin
       reg_mem[_zz_reg_mem_port_38] <= _zz_reg_mem_port_39;
     end
   end
 
   always @(posedge io_clk) begin
-    if(_zz_13) begin
+    if(_zz_14) begin
       reg_mem[_zz_reg_mem_port_40] <= _zz_reg_mem_port_41;
     end
   end
 
   always @(posedge io_clk) begin
-    if(_zz_12) begin
+    if(_zz_13) begin
       reg_mem[_zz_reg_mem_port_42] <= _zz_reg_mem_port_43;
     end
   end
 
   always @(posedge io_clk) begin
-    if(_zz_11) begin
+    if(_zz_12) begin
       reg_mem[_zz_reg_mem_port_44] <= _zz_reg_mem_port_45;
     end
   end
 
   always @(posedge io_clk) begin
-    if(_zz_10) begin
+    if(_zz_11) begin
       reg_mem[_zz_reg_mem_port_46] <= _zz_reg_mem_port_47;
     end
   end
 
   always @(posedge io_clk) begin
-    if(_zz_9) begin
+    if(_zz_10) begin
       reg_mem[_zz_reg_mem_port_48] <= _zz_reg_mem_port_49;
     end
   end
 
   always @(posedge io_clk) begin
-    if(_zz_8) begin
+    if(_zz_9) begin
       reg_mem[_zz_reg_mem_port_50] <= _zz_reg_mem_port_51;
     end
   end
 
   always @(posedge io_clk) begin
-    if(_zz_7) begin
+    if(_zz_8) begin
       reg_mem[_zz_reg_mem_port_52] <= _zz_reg_mem_port_53;
     end
   end
 
   always @(posedge io_clk) begin
-    if(_zz_6) begin
+    if(_zz_7) begin
       reg_mem[_zz_reg_mem_port_54] <= _zz_reg_mem_port_55;
     end
   end
 
   always @(posedge io_clk) begin
-    if(_zz_5) begin
+    if(_zz_6) begin
       reg_mem[_zz_reg_mem_port_56] <= _zz_reg_mem_port_57;
     end
   end
 
   always @(posedge io_clk) begin
-    if(_zz_4) begin
+    if(_zz_5) begin
       reg_mem[_zz_reg_mem_port_58] <= _zz_reg_mem_port_59;
     end
   end
 
   always @(posedge io_clk) begin
-    if(_zz_3) begin
+    if(_zz_4) begin
       reg_mem[_zz_reg_mem_port_60] <= _zz_reg_mem_port_61;
     end
   end
 
   always @(posedge io_clk) begin
-    if(_zz_2) begin
+    if(_zz_3) begin
       reg_mem[_zz_reg_mem_port_62] <= _zz_reg_mem_port_63;
     end
   end
 
   always @(posedge io_clk) begin
-    if(_zz_1) begin
+    if(_zz_2) begin
       reg_mem[io_rd_addr] <= _zz_reg_mem_port_64;
+    end
+  end
+
+  always @(posedge io_clk) begin
+    if(_zz_1) begin
+      reg_mem[io_rd_addr] <= _zz_reg_mem_port_65;
     end
   end
 
   always @(*) begin
     _zz_1 = 1'b0;
     if(io_w_en) begin
-      _zz_1 = 1'b1;
+      if(!when_regs_l56) begin
+        _zz_1 = 1'b1;
+      end
     end
   end
 
   always @(*) begin
     _zz_2 = 1'b0;
-    if(when_regs_l46) begin
-      _zz_2 = 1'b1;
+    if(io_w_en) begin
+      if(when_regs_l56) begin
+        _zz_2 = 1'b1;
+      end
     end
   end
 
   always @(*) begin
     _zz_3 = 1'b0;
-    if(when_regs_l46) begin
+    if(when_regs_l50) begin
       _zz_3 = 1'b1;
     end
   end
 
   always @(*) begin
     _zz_4 = 1'b0;
-    if(when_regs_l46) begin
+    if(when_regs_l50) begin
       _zz_4 = 1'b1;
     end
   end
 
   always @(*) begin
     _zz_5 = 1'b0;
-    if(when_regs_l46) begin
+    if(when_regs_l50) begin
       _zz_5 = 1'b1;
     end
   end
 
   always @(*) begin
     _zz_6 = 1'b0;
-    if(when_regs_l46) begin
+    if(when_regs_l50) begin
       _zz_6 = 1'b1;
     end
   end
 
   always @(*) begin
     _zz_7 = 1'b0;
-    if(when_regs_l46) begin
+    if(when_regs_l50) begin
       _zz_7 = 1'b1;
     end
   end
 
   always @(*) begin
     _zz_8 = 1'b0;
-    if(when_regs_l46) begin
+    if(when_regs_l50) begin
       _zz_8 = 1'b1;
     end
   end
 
   always @(*) begin
     _zz_9 = 1'b0;
-    if(when_regs_l46) begin
+    if(when_regs_l50) begin
       _zz_9 = 1'b1;
     end
   end
 
   always @(*) begin
     _zz_10 = 1'b0;
-    if(when_regs_l46) begin
+    if(when_regs_l50) begin
       _zz_10 = 1'b1;
     end
   end
 
   always @(*) begin
     _zz_11 = 1'b0;
-    if(when_regs_l46) begin
+    if(when_regs_l50) begin
       _zz_11 = 1'b1;
     end
   end
 
   always @(*) begin
     _zz_12 = 1'b0;
-    if(when_regs_l46) begin
+    if(when_regs_l50) begin
       _zz_12 = 1'b1;
     end
   end
 
   always @(*) begin
     _zz_13 = 1'b0;
-    if(when_regs_l46) begin
+    if(when_regs_l50) begin
       _zz_13 = 1'b1;
     end
   end
 
   always @(*) begin
     _zz_14 = 1'b0;
-    if(when_regs_l46) begin
+    if(when_regs_l50) begin
       _zz_14 = 1'b1;
     end
   end
 
   always @(*) begin
     _zz_15 = 1'b0;
-    if(when_regs_l46) begin
+    if(when_regs_l50) begin
       _zz_15 = 1'b1;
     end
   end
 
   always @(*) begin
     _zz_16 = 1'b0;
-    if(when_regs_l46) begin
+    if(when_regs_l50) begin
       _zz_16 = 1'b1;
     end
   end
 
   always @(*) begin
     _zz_17 = 1'b0;
-    if(when_regs_l46) begin
+    if(when_regs_l50) begin
       _zz_17 = 1'b1;
     end
   end
 
   always @(*) begin
     _zz_18 = 1'b0;
-    if(when_regs_l46) begin
+    if(when_regs_l50) begin
       _zz_18 = 1'b1;
     end
   end
 
   always @(*) begin
     _zz_19 = 1'b0;
-    if(when_regs_l46) begin
+    if(when_regs_l50) begin
       _zz_19 = 1'b1;
     end
   end
 
   always @(*) begin
     _zz_20 = 1'b0;
-    if(when_regs_l46) begin
+    if(when_regs_l50) begin
       _zz_20 = 1'b1;
     end
   end
 
   always @(*) begin
     _zz_21 = 1'b0;
-    if(when_regs_l46) begin
+    if(when_regs_l50) begin
       _zz_21 = 1'b1;
     end
   end
 
   always @(*) begin
     _zz_22 = 1'b0;
-    if(when_regs_l46) begin
+    if(when_regs_l50) begin
       _zz_22 = 1'b1;
     end
   end
 
   always @(*) begin
     _zz_23 = 1'b0;
-    if(when_regs_l46) begin
+    if(when_regs_l50) begin
       _zz_23 = 1'b1;
     end
   end
 
   always @(*) begin
     _zz_24 = 1'b0;
-    if(when_regs_l46) begin
+    if(when_regs_l50) begin
       _zz_24 = 1'b1;
     end
   end
 
   always @(*) begin
     _zz_25 = 1'b0;
-    if(when_regs_l46) begin
+    if(when_regs_l50) begin
       _zz_25 = 1'b1;
     end
   end
 
   always @(*) begin
     _zz_26 = 1'b0;
-    if(when_regs_l46) begin
+    if(when_regs_l50) begin
       _zz_26 = 1'b1;
     end
   end
 
   always @(*) begin
     _zz_27 = 1'b0;
-    if(when_regs_l46) begin
+    if(when_regs_l50) begin
       _zz_27 = 1'b1;
     end
   end
 
   always @(*) begin
     _zz_28 = 1'b0;
-    if(when_regs_l46) begin
+    if(when_regs_l50) begin
       _zz_28 = 1'b1;
     end
   end
 
   always @(*) begin
     _zz_29 = 1'b0;
-    if(when_regs_l46) begin
+    if(when_regs_l50) begin
       _zz_29 = 1'b1;
     end
   end
 
   always @(*) begin
     _zz_30 = 1'b0;
-    if(when_regs_l46) begin
+    if(when_regs_l50) begin
       _zz_30 = 1'b1;
     end
   end
 
   always @(*) begin
     _zz_31 = 1'b0;
-    if(when_regs_l46) begin
+    if(when_regs_l50) begin
       _zz_31 = 1'b1;
     end
   end
 
   always @(*) begin
     _zz_32 = 1'b0;
-    if(when_regs_l46) begin
+    if(when_regs_l50) begin
       _zz_32 = 1'b1;
     end
   end
 
   always @(*) begin
     _zz_33 = 1'b0;
-    if(when_regs_l46) begin
+    if(when_regs_l50) begin
       _zz_33 = 1'b1;
     end
   end
 
-  assign when_regs_l29 = (io_w_en && (io_rd_addr == io_rs1_addr));
+  always @(*) begin
+    _zz_34 = 1'b0;
+    if(when_regs_l50) begin
+      _zz_34 = 1'b1;
+    end
+  end
+
+  assign when_regs_l29 = (io_rs1_addr == 5'h0);
   always @(*) begin
     if(when_regs_l29) begin
-      io_rs1_data = io_rd_data;
+      io_rs1_data = 32'h0;
     end else begin
-      io_rs1_data = _zz_reg_mem_port0;
+      if(when_regs_l31) begin
+        io_rs1_data = io_rd_data;
+      end else begin
+        io_rs1_data = _zz_reg_mem_port0;
+      end
     end
   end
 
-  assign when_regs_l35 = (io_w_en && (io_rd_addr == io_rs2_addr));
+  assign when_regs_l31 = (io_w_en && (io_rd_addr == io_rs1_addr));
+  assign when_regs_l37 = (io_rs2_addr == 5'h0);
   always @(*) begin
-    if(when_regs_l35) begin
-      io_rs2_data = io_rd_data;
+    if(when_regs_l37) begin
+      io_rs2_data = 32'h0;
     end else begin
-      io_rs2_data = _zz_reg_mem_port1;
+      if(when_regs_l39) begin
+        io_rs2_data = io_rd_data;
+      end else begin
+        io_rs2_data = _zz_reg_mem_port1;
+      end
     end
   end
 
-  assign when_regs_l46 = (! io_rst_n);
+  assign when_regs_l39 = (io_w_en && (io_rd_addr == io_rs2_addr));
+  assign when_regs_l50 = (! io_rst_n);
+  assign when_regs_l56 = (io_rd_addr == 5'h0);
 
 endmodule
