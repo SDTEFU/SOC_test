@@ -49,12 +49,12 @@ class regs(CPU_bit: Int) extends Module {
 
     when(!io.rst_n) { //复位时给寄存器堆的值清0
       for (rstcount <- 0 until reg_count) {
-        reg_mem(U(rstcount, reg_addr_len bits)) := U(0, 32 bits)
+        reg_mem(U(rstcount, reg_addr_len bits)) := U(0, CPU_bit bits)
       }
     }
     when(io.w_en) { //给寄存器堆写数据使能
       when(io.rd_addr === 0) {//若写的寄存器是0寄存器
-        reg_mem(io.rd_addr) := U(0, 32 bits)
+        reg_mem(io.rd_addr) := U(0, CPU_bit bits)
       } otherwise {
         reg_mem(io.rd_addr) := io.rd_data
       }
