@@ -7,14 +7,16 @@
 4. TIM（定时器）
 5. RCC（系统时钟）
 6. UART（通用异步收发传输器）
+7. [SSK](https://github.com/SDTEFU/BUS_libary/tree/main/SSK) (同步伸缩保持串型总线)
 
 
 
 
 
 
-
-
+> ## FPIOA
+>> **每个 "物理" io口都有一个寄存器用来保存连接 "外设" io口的数据**
+>> **每个 "物理" io口都拥有一个属于自己的GPIO外设 (GPIO外设不需要连接，硬件绑定)**
 
 
 ## 外舍功能实现图
