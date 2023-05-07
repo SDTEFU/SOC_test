@@ -1,15 +1,15 @@
 import spinal.core._
 
-class template_module extends Module {
+class temp extends Module {
   val io =new Bundle{
 
   }
 
 }
 
-object template_module extends App {
+object temp extends App {
   SpinalConfig(
     mode = Verilog,
     targetDirectory = "./RTL_verilog_code"
-  ).generate(new template_module)
+  ).generate(new temp)
 }

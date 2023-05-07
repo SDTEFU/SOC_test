@@ -1,8 +1,6 @@
 import spinal.core._
 
 class regs(CPU_bit: Int) extends Module {
-  val reg_addr_len = 5 //寄存器地址长度
-  val reg_count = scala.math.pow(2, reg_addr_len).toInt //寄存器数量
 
 
   val io = new Bundle {
@@ -11,18 +9,18 @@ class regs(CPU_bit: Int) extends Module {
     val rst_n = in Bool()
 
     //from id
-    val rs1_addr = in UInt (reg_addr_len bits)
-    val rs2_addr = in UInt (reg_addr_len bits)
+    val rs1_addr = in UInt (5 bits)
+    val rs2_addr = in UInt (5 bits)
 
     val rs1_data = out UInt (CPU_bit bits)
     val rs2_data = out UInt (CPU_bit bits)
     //from ex
     val w_en = in Bool()
-    val rd_addr = in UInt (reg_addr_len bits)
+    val rd_addr = in UInt (5 bits)
     val rd_data = in UInt (CPU_bit bits)
   }
 
-  val reg_mem = Mem(UInt(CPU_bit bits), reg_count)
+  val reg_mem = Mem(UInt(CPU_bit bits), 32)//寄存器堆
 
 
   //read rs1
@@ -42,25 +40,26 @@ class regs(CPU_bit: Int) extends Module {
     io.rs2_data := reg_mem(io.rs2_addr)
   }
 
-  //写数据给目标寄存器
-  val clkdmicfg = ClockDomainConfig(clockEdge = RISING, resetKind = SYNC, resetActiveLevel = LOW)
-  val clkdmi = ClockDomain(clock = io.clk, reset = io.rst_n, config = clkdmicfg)
-  val clkdmiarea = new ClockingArea(clkdmi) {
 
-    when(!io.rst_n) { //复位时给寄存器堆的值清0
-      for (rstcount <- 0 until reg_count) {
-        reg_mem(U(rstcount, reg_addr_len bits)) := U(0, CPU_bit bits)
-      }
+  //复位时给寄存器堆的值清0==============================================================================
+  when(!io.rst_n) {
+    for (rstcount <- 0 until 32) {
+      reg_mem(U(rstcount, 5 bits)) := U(0, CPU_bit bits)
     }
-    when(io.w_en) { //给寄存器堆写数据使能
-      when(io.rd_addr === 0) {//若写的寄存器是0寄存器
-        reg_mem(io.rd_addr) := U(0, CPU_bit bits)
-      } otherwise {
-        reg_mem(io.rd_addr) := io.rd_data
-      }
-    }
-
   }
+  //================================================================================================
+
+
+  //写数据给目标寄存器
+  when(io.w_en) { //给寄存器堆写数据使能
+    when(io.rd_addr === 0) { //若写的寄存器是0寄存器
+      reg_mem(io.rd_addr) := U(0, CPU_bit bits)
+    } otherwise {
+      reg_mem(io.rd_addr) := io.rd_data
+    }
+  }
+
+
 }
 
 object regs extends App {
@@ -69,6 +68,6 @@ object regs extends App {
     targetDirectory = "./RTL_verilog_code"
   ).generate(new regs(32))
 
-  val reg_addr_len = 5
-  println(s"${scala.math.pow(2, reg_addr_len).toInt}")
+  val 5 = 5
+  println(s"${scala.math.pow(2, 5).toInt}")
 }
