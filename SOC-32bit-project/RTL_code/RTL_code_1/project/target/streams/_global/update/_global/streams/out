@@ -1,3 +1,4 @@
-[debug] not up to date. inChanged = true, force = false
-[debug] Updating ProjectRef(uri("file:/home/adgert/Desktop/test/MCU_test/MCU-32bit-project/RTL_code/RTL_code_1/project/"), "rtl_code_1-build")...
-[debug] Done updating ProjectRef(uri("file:/home/adgert/Desktop/test/MCU_test/MCU-32bit-project/RTL_code/RTL_code_1/project/"), "rtl_code_1-build")
+[0m[[0m[0mdebug[0m] [0m[0mnot up to date. inChanged = true, force = false[0m
+[0m[[0m[0mdebug[0m] [0m[0mUpdating ProjectRef(uri("file:/home/adgert/Desktop/test/git-project/SOC_test/SOC-32bit-project/RTL_code/RTL_code_1/project/"), "rtl_code_1-build")...[0m
+[0m[[0m[33mwarn[0m] [0m[0mUnrecognized repository Scala Plugin Bundled Repository, ignoring it[0m
+[0m[[0m[0mdebug[0m] [0m[0mDone updating ProjectRef(uri("file:/home/adgert/Desktop/test/git-project/SOC_test/SOC-32bit-project/RTL_code/RTL_code_1/project/"), "rtl_code_1-build")[0m
