@@ -29,8 +29,7 @@ object sys extends App {
   import spinal.core.sim._
 
   SimConfig.withWave.workspacePath("./RTL_sim").compile(new sys).doSim { dut =>
-    fork {
-
+    fork {//提供时钟源
       while (true) {
         dut.io.ckl #= false
         sleep(5)
