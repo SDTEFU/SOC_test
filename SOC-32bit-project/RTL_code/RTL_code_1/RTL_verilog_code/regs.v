@@ -1,6 +1,6 @@
 // Generator : SpinalHDL v1.8.1    git head : 2a7592004363e5b40ec43e1f122ed8641cd8965b
 // Component : regs
-// Git hash  : c4ec9e181b11aa1052ddd4f4a0813de50e3648a5
+// Git hash  : d1c9adfb9a7aab45a29ba6b84e3bea900a8c7bee
 
 `timescale 1ns/1ps
 
@@ -120,12 +120,12 @@ module regs (
   reg                 _zz_32;
   reg                 _zz_33;
   reg                 _zz_34;
+  wire                when_regs_l27;
   wire                when_regs_l29;
-  wire                when_regs_l31;
+  wire                when_regs_l35;
   wire                when_regs_l37;
-  wire                when_regs_l39;
-  wire                when_regs_l48;
-  wire                when_regs_l54;
+  wire                when_regs_l45;
+  wire                when_regs_l55;
   (* ram_style = "distributed" *) reg [31:0] reg_mem [0:31];
 
   assign _zz_reg_mem_port = 5'h0;
@@ -403,7 +403,7 @@ module regs (
   always @(*) begin
     _zz_1 = 1'b0;
     if(io_w_en) begin
-      if(!when_regs_l54) begin
+      if(!when_regs_l55) begin
         _zz_1 = 1'b1;
       end
     end
@@ -412,7 +412,7 @@ module regs (
   always @(*) begin
     _zz_2 = 1'b0;
     if(io_w_en) begin
-      if(when_regs_l54) begin
+      if(when_regs_l55) begin
         _zz_2 = 1'b1;
       end
     end
@@ -420,234 +420,234 @@ module regs (
 
   always @(*) begin
     _zz_3 = 1'b0;
-    if(when_regs_l48) begin
+    if(when_regs_l45) begin
       _zz_3 = 1'b1;
     end
   end
 
   always @(*) begin
     _zz_4 = 1'b0;
-    if(when_regs_l48) begin
+    if(when_regs_l45) begin
       _zz_4 = 1'b1;
     end
   end
 
   always @(*) begin
     _zz_5 = 1'b0;
-    if(when_regs_l48) begin
+    if(when_regs_l45) begin
       _zz_5 = 1'b1;
     end
   end
 
   always @(*) begin
     _zz_6 = 1'b0;
-    if(when_regs_l48) begin
+    if(when_regs_l45) begin
       _zz_6 = 1'b1;
     end
   end
 
   always @(*) begin
     _zz_7 = 1'b0;
-    if(when_regs_l48) begin
+    if(when_regs_l45) begin
       _zz_7 = 1'b1;
     end
   end
 
   always @(*) begin
     _zz_8 = 1'b0;
-    if(when_regs_l48) begin
+    if(when_regs_l45) begin
       _zz_8 = 1'b1;
     end
   end
 
   always @(*) begin
     _zz_9 = 1'b0;
-    if(when_regs_l48) begin
+    if(when_regs_l45) begin
       _zz_9 = 1'b1;
     end
   end
 
   always @(*) begin
     _zz_10 = 1'b0;
-    if(when_regs_l48) begin
+    if(when_regs_l45) begin
       _zz_10 = 1'b1;
     end
   end
 
   always @(*) begin
     _zz_11 = 1'b0;
-    if(when_regs_l48) begin
+    if(when_regs_l45) begin
       _zz_11 = 1'b1;
     end
   end
 
   always @(*) begin
     _zz_12 = 1'b0;
-    if(when_regs_l48) begin
+    if(when_regs_l45) begin
       _zz_12 = 1'b1;
     end
   end
 
   always @(*) begin
     _zz_13 = 1'b0;
-    if(when_regs_l48) begin
+    if(when_regs_l45) begin
       _zz_13 = 1'b1;
     end
   end
 
   always @(*) begin
     _zz_14 = 1'b0;
-    if(when_regs_l48) begin
+    if(when_regs_l45) begin
       _zz_14 = 1'b1;
     end
   end
 
   always @(*) begin
     _zz_15 = 1'b0;
-    if(when_regs_l48) begin
+    if(when_regs_l45) begin
       _zz_15 = 1'b1;
     end
   end
 
   always @(*) begin
     _zz_16 = 1'b0;
-    if(when_regs_l48) begin
+    if(when_regs_l45) begin
       _zz_16 = 1'b1;
     end
   end
 
   always @(*) begin
     _zz_17 = 1'b0;
-    if(when_regs_l48) begin
+    if(when_regs_l45) begin
       _zz_17 = 1'b1;
     end
   end
 
   always @(*) begin
     _zz_18 = 1'b0;
-    if(when_regs_l48) begin
+    if(when_regs_l45) begin
       _zz_18 = 1'b1;
     end
   end
 
   always @(*) begin
     _zz_19 = 1'b0;
-    if(when_regs_l48) begin
+    if(when_regs_l45) begin
       _zz_19 = 1'b1;
     end
   end
 
   always @(*) begin
     _zz_20 = 1'b0;
-    if(when_regs_l48) begin
+    if(when_regs_l45) begin
       _zz_20 = 1'b1;
     end
   end
 
   always @(*) begin
     _zz_21 = 1'b0;
-    if(when_regs_l48) begin
+    if(when_regs_l45) begin
       _zz_21 = 1'b1;
     end
   end
 
   always @(*) begin
     _zz_22 = 1'b0;
-    if(when_regs_l48) begin
+    if(when_regs_l45) begin
       _zz_22 = 1'b1;
     end
   end
 
   always @(*) begin
     _zz_23 = 1'b0;
-    if(when_regs_l48) begin
+    if(when_regs_l45) begin
       _zz_23 = 1'b1;
     end
   end
 
   always @(*) begin
     _zz_24 = 1'b0;
-    if(when_regs_l48) begin
+    if(when_regs_l45) begin
       _zz_24 = 1'b1;
     end
   end
 
   always @(*) begin
     _zz_25 = 1'b0;
-    if(when_regs_l48) begin
+    if(when_regs_l45) begin
       _zz_25 = 1'b1;
     end
   end
 
   always @(*) begin
     _zz_26 = 1'b0;
-    if(when_regs_l48) begin
+    if(when_regs_l45) begin
       _zz_26 = 1'b1;
     end
   end
 
   always @(*) begin
     _zz_27 = 1'b0;
-    if(when_regs_l48) begin
+    if(when_regs_l45) begin
       _zz_27 = 1'b1;
     end
   end
 
   always @(*) begin
     _zz_28 = 1'b0;
-    if(when_regs_l48) begin
+    if(when_regs_l45) begin
       _zz_28 = 1'b1;
     end
   end
 
   always @(*) begin
     _zz_29 = 1'b0;
-    if(when_regs_l48) begin
+    if(when_regs_l45) begin
       _zz_29 = 1'b1;
     end
   end
 
   always @(*) begin
     _zz_30 = 1'b0;
-    if(when_regs_l48) begin
+    if(when_regs_l45) begin
       _zz_30 = 1'b1;
     end
   end
 
   always @(*) begin
     _zz_31 = 1'b0;
-    if(when_regs_l48) begin
+    if(when_regs_l45) begin
       _zz_31 = 1'b1;
     end
   end
 
   always @(*) begin
     _zz_32 = 1'b0;
-    if(when_regs_l48) begin
+    if(when_regs_l45) begin
       _zz_32 = 1'b1;
     end
   end
 
   always @(*) begin
     _zz_33 = 1'b0;
-    if(when_regs_l48) begin
+    if(when_regs_l45) begin
       _zz_33 = 1'b1;
     end
   end
 
   always @(*) begin
     _zz_34 = 1'b0;
-    if(when_regs_l48) begin
+    if(when_regs_l45) begin
       _zz_34 = 1'b1;
     end
   end
 
-  assign when_regs_l29 = (io_rs1_addr == 5'h0);
+  assign when_regs_l27 = (io_rs1_addr == 5'h0);
   always @(*) begin
-    if(when_regs_l29) begin
+    if(when_regs_l27) begin
       io_rs1_data = 32'h0;
     end else begin
-      if(when_regs_l31) begin
+      if(when_regs_l29) begin
         io_rs1_data = io_rd_data;
       end else begin
         io_rs1_data = _zz_reg_mem_port0;
@@ -655,13 +655,13 @@ module regs (
     end
   end
 
-  assign when_regs_l31 = (io_w_en && (io_rd_addr == io_rs1_addr));
-  assign when_regs_l37 = (io_rs2_addr == 5'h0);
+  assign when_regs_l29 = (io_w_en && (io_rd_addr == io_rs1_addr));
+  assign when_regs_l35 = (io_rs2_addr == 5'h0);
   always @(*) begin
-    if(when_regs_l37) begin
+    if(when_regs_l35) begin
       io_rs2_data = 32'h0;
     end else begin
-      if(when_regs_l39) begin
+      if(when_regs_l37) begin
         io_rs2_data = io_rd_data;
       end else begin
         io_rs2_data = _zz_reg_mem_port1;
@@ -669,8 +669,8 @@ module regs (
     end
   end
 
-  assign when_regs_l39 = (io_w_en && (io_rd_addr == io_rs2_addr));
-  assign when_regs_l48 = (! io_rst_n);
-  assign when_regs_l54 = (io_rd_addr == 5'h0);
+  assign when_regs_l37 = (io_w_en && (io_rd_addr == io_rs2_addr));
+  assign when_regs_l45 = (! io_rst_n);
+  assign when_regs_l55 = (io_rd_addr == 5'h0);
 
 endmodule
