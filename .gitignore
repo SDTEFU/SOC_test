@@ -33,3 +33,7 @@ metals.sbt
 
 # JAVA
 .class
+
+# other
+.cpp
+.c
