@@ -32,8 +32,8 @@ metals.sbt
 /.worksheet/
 
 # JAVA
-.class
+*.class
 
 # other
-.cpp
-.c
+*.cpp
+*.c
